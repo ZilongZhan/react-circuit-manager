@@ -1,11 +1,8 @@
-import React from "react";
-import { Footer } from "./components/Footer";
+import { Footer } from "./shared";
 
 import "./App.css";
 import "./sanitize.css";
 
-function App() {
-  return <Footer />;
-}
+function App() {}
 
 export default App;
