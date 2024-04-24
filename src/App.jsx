@@ -1,6 +1,11 @@
-function App() {
+import React from "react";
+import { Footer } from "./components/Footer";
 
-  return <></>;
+import "./App.css";
+import "./sanitize.css";
+
+function App() {
+  return <Footer />;
 }
 
 export default App;
