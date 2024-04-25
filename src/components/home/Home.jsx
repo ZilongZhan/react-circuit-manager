@@ -1,30 +1,18 @@
+import { useIssues } from "../../hooks";
+import { Issue } from "./Issue";
+
 import "./Home.css";
 
 export const Home = () => {
+  const { issues, handleSetIssues } = useIssues();
+
   return (
     <main className="main-home">
-      <div className="issues-container">
-        <div className="issue">
-          <span className="issue-info red">Admin John Doe</span>
-          <span className="issue-info">Assumpte de la reparació</span>
-          <span className="issue-info">12:45</span>
-        </div>
-        <div className="issue">
-          <span className="issue-info green">Admin John Doe</span>
-          <span className="issue-info">Assumpte de la reparació</span>
-          <span className="issue-info">12:45</span>
-        </div>
-        <div className="issue">
-          <span className="issue-info yellow">Admin John Doe</span>
-          <span className="issue-info">Assumpte de la reparació</span>
-          <span className="issue-info">12:45</span>
-        </div>
-        <div className="issue">
-          <span className="issue-info purple">Admin John Doe</span>
-          <span className="issue-info">Assumpte de la reparació</span>
-          <span className="issue-info">12:45</span>
-        </div>
-      </div>
+      <ul className="issues-list">
+        {issues.map((issue) => (
+          <Issue key={issue.id} issue={issue} />
+        ))}
+      </ul>
     </main>
   );
 };
