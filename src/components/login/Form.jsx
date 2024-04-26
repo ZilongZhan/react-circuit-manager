@@ -1,15 +1,28 @@
 import React, { useState } from "react";
+import { authenticateUser } from "../../services/userServices";
+
 export const Form = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(`Name: ${name}, Password: ${password}`);
+    try {
+  const isAuthenticated = await authenticateUser(name, password);
+
+      if (isAuthenticated) {
+        // Continuar con la lógica después de la autenticación exitosa
+      } else {
+        setError("Authentication failed");
+      }
+    } catch (error) {
+      setError("An error occurred during authentication");
+    }
   };
 
   return (
-    <form onSubmit={(event) => handleSubmit(event)} className="login-form">
+    <form onSubmit={handleSubmit} className="login-form">
       <div className="heading-container">
         <h1>Inicia sessió</h1>
       </div>
@@ -31,6 +44,7 @@ export const Form = () => {
           onChange={(event) => setPassword(event.target.value)}
         />
       </div>
+      {error && <div className="error-message">{error}</div>}
       <div className="button-container">
         <button type="submit" className="login-button">
           <div className="button-text">Login</div>
