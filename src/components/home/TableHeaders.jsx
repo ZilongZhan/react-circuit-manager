@@ -10,6 +10,7 @@ export const TableHeaders = () => {
       <th className="table-header">
         <h2>HORA</h2>
       </th>
+      <th></th>
     </thead>
   );
 };
