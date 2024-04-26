@@ -1,0 +1,41 @@
+.red-button {
+  background-color: #e14d43;
+  box-shadow: 5px 5px 5px #e14d43;
+}
+
+.red-button:hover {
+  background-color: #fff;
+  color: #e14d43;
+  box-shadow: 5px 5px 5px #f55;
+  border: 2px solid #e14d43;
+  transition: 0.5s;
+}
+
+.black-button {
+  background-color: #333;
+  box-shadow: 5px 5px 5px #333;
+}
+
+.black-button:hover {
+  color: #333;
+  background-color: #fff;
+  border: 2px solid #333;
+  box-shadow: 5px 5px 5px #444;
+  transition: 0.5s;
+}
+
+.button {
+  transition: 0.5s;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid white;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+
+  transform: skewX(-10deg);
+}
+
+.text {
+  transform: skewX(10deg);
+}
