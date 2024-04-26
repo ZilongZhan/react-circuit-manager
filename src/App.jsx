@@ -4,7 +4,7 @@ import { BlackButton, RedButton } from "./shared";
 import "./App.css";
 import "./sanitize.css";
 
-import { LogIn } from "./components/logIn/LogIn";
+import { LogIn } from "./components/logIn/LogIn.jsx";
 function App() {
   return (
     <>
