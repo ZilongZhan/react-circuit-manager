@@ -1,0 +1,14 @@
+.search-bar__container {
+  display: flex;
+  justify-content: flex-start;
+  width: 70vw;
+}
+
+.search-bar {
+  height: 3rem;
+  width: 30rem;
+  padding: 1rem;
+  font-size: 20px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}

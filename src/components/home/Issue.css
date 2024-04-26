@@ -1,0 +1,47 @@
+.issue {
+  background: rgb(237, 237, 237, 0.4);
+  padding: 1rem;
+  border: 0.5px solid rgb(182, 182, 182);
+  width: 70vw;
+  display: flex;
+  justify-content: space-evenly;
+  transition: 0.3s;
+}
+
+.issue:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+.issue .issue-info {
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.time {
+  font-size: 20px;
+  font-weight: 300 !important;
+}
+
+.priority-red {
+  color: red;
+}
+
+.priority-green {
+  color: rgb(82, 219, 82);
+}
+
+.priority-yellow {
+  color: rgb(205, 205, 51);
+}
+
+.priority-purple {
+  color: rgb(191, 78, 214);
+}
+
+.priority-none {
+  color: rgb(196, 196, 196);
+}
