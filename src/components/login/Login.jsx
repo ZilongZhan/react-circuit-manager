@@ -6,7 +6,11 @@ export const Login = () => {
   return (
     <div className="bodyContent">
       <Footer />
-      <Form />
-    </div >
+      <aside className="aside-content">
+        <div className="form-container">
+          <Form />
+        </div>
+      </aside>
+    </div>
   );
 };

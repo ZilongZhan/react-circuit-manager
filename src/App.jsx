@@ -6,11 +6,7 @@ import "./App.css";
 import "./sanitize.css";
 
 function App() {
-  return (
-    <>
-      <Login />
-    </>
-  );
+  return <></>;
 }
 
 export default App;
