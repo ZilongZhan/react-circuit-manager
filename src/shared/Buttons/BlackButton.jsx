@@ -10,4 +10,4 @@ export const BlackButton = ({ src, text }) => {
     </button>
   );
 };
-``;
+;

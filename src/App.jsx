@@ -1,9 +1,11 @@
 import { Footer } from "./shared";
-import { BlackButton, RedButton } from "./shared";
+import { BlackButton, RedButton, Button } from "./shared";
 
 import "./App.css";
 import "./sanitize.css";
 
-function App() {}
+function App() {
+  return <Button src={"/pene"} text={"Go to Pene"} color={"red"} />;
+}
 
 export default App;
