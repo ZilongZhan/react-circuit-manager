@@ -1,4 +1,4 @@
-import { LogIn } from "./components/logIn/LogIn.jsx";
+import { LogIn } from "./components/logIn/LogIn";
 function App() {
   return (
     <>

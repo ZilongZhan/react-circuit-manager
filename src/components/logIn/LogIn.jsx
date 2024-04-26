@@ -1,6 +1,8 @@
 import { LogInForm } from "./LogInForm";
-import "../logIn/styles.css";
+import "./styles.css";
 
 export const LogIn = () => {
-  return <LogInForm />;
+  return
+  
+   <LogInForm />;
 };

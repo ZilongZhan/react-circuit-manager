@@ -1,13 +1,83 @@
-* {
-  margin: 0;
-  padding: 0;
+@font-face {
+  font-family: "Lexend";
+  src: url("../../../public/fonts/Lexend-VariableFont_wght.ttf");
 }
-form {
-  background-color: red;
+
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lexend";
+}
+
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-image: url("./assets/background-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.aside-content {
   width: 30vw;
   height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.background-image {
+  width: 70vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.form-container {
+  height: 100vh;
+  background: red;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  width: 22vw;
+  padding: 4vh;
+  background: transparent;
+  font-size: 20px;
+}
+
+.input-container {
+  margin: 3vh 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container input {
+  font-size: 20px;
+  margin: 1vh 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: end;
+}
+
+.login-button {
+  font-size: 20px;
+  padding: 0.5vh 1.5vw;
+  background: white;
+  font-weight: bold;
+  transition: 0.25s;
+  transform: skew(-20deg);
+  margin-right: 0.5vw;
+}
+
+.login-button:hover {
+  background: black;
+  color: white;
+  transition: 0.25s;
 }
