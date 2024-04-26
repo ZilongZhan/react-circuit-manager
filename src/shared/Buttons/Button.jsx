@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 import "./Button.css";
 
-export const Button = ({ src, text, color }) => {
+export const Button = ({ src, label, color }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -11,7 +11,7 @@ export const Button = ({ src, text, color }) => {
 
   return (
     <button className={`button ${color}`} onClick={handleClick}>
-      <div className="text">{text}</div>
+      <div className="text">{label}</div>
     </button>
   );
 };
