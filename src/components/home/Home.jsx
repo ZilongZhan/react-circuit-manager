@@ -1,18 +1,18 @@
 import { useIssues } from "../../hooks";
-import { Issue } from "./Issue";
+import { TableBody } from "./TableBody";
+import { TableHeaders } from "./TableHeaders";
 
 import "./Home.css";
 
 export const Home = () => {
-  const { issues, handleSetIssues } = useIssues();
+  const { issues } = useIssues();
 
   return (
     <main className="main-home">
-      <ul className="issues-list">
-        {issues.map((issue) => (
-          <Issue key={issue.id} issue={issue} />
-        ))}
-      </ul>
+      <table>
+        <TableHeaders />
+        <TableBody issues={issues} />
+      </table>
     </main>
   );
 };

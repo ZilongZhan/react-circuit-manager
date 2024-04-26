@@ -1,4 +1,4 @@
-import { Home } from "./components";
+import { Home, Login } from "./components";
 import { Footer } from "./shared";
 import { BlackButton, RedButton } from "./shared";
 
@@ -8,8 +8,6 @@ import "./sanitize.css";
 function App() {
   return (
     <>
-      <Home />
-      <Footer />
     </>
   );
 }
