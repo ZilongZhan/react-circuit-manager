@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Lexend";
+  src: url("/fonts/Lexend-VariableFont_wght.ttf");
+}
+
+* {
+  font-family: "Lexend";
+}
+
+.main-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.issue-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.issue {
+  background: rgb(237, 237, 237, 0.4);
+  padding: 1rem;
+  border: 0.5px solid rgb(182, 182, 182);
+  width: 70vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.issue .issue-info {
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.time {
+  font-size: 20px;
+  font-weight: 300 !important;
+}
+
+span {
+  height: fit-content;
+  width: 20vw;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: rgb(82, 219, 82);
+}
+
+.yellow {
+  color: rgb(205, 205, 51);
+}
+
+.purple {
+  color: rgb(191, 78, 214);
+}
+
+.none {
+  color: rgb(196, 196, 196);
+}
