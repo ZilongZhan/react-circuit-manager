@@ -5,7 +5,7 @@
 
 .red-button:hover {
   background-color: #fff;
-  color: #e14d43;
+    color: #e14d43;
   box-shadow: 5px 5px 5px #f55;
   border: 2px solid #e14d43;
   transition: 0.5s;
@@ -17,8 +17,7 @@
 }
 
 .black-button:hover {
-  color: #333;
-  background-color: #fff;
+  background-color: #444;
   border: 2px solid #333;
   box-shadow: 5px 5px 5px #444;
   transition: 0.5s;

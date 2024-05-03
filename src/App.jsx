@@ -1,9 +1,16 @@
 import { Footer } from "./shared";
-import { BlackButton, RedButton, Button } from "./shared";
+import { Button, BurgerMenu } from "./shared";
 
 import "./App.css";
 import "./sanitize.css";
 
-function App() {}
+function App() {
+  return (
+    <div className="app">
+      <BurgerMenu />
+      <Footer />
+    </div>
+  );
+}
 
 export default App;
