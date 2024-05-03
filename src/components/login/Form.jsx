@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { authenticateUser } from "../../services/userServices";
+import { getUsers } from "../../services/userServices";
 
 export const Form = () => {
   const [name, setName] = useState("");
@@ -9,20 +9,23 @@ export const Form = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const isAuthenticated = await authenticateUser(name, password);
+      const users = await getUsers();
+      const authenticatedUser = users.find(
+        (user) => user.name === name && user.password === password
+      );
 
-      if (isAuthenticated) {
-        console.log("Authentication successful");
+      if (authenticatedUser) {
         console.log(name, password);
-        //afegir logica per quan la autenticació sigui exitosa
+        // CONTINURAR QUAN LA AUTENTIFICACIO ES EXITOSA
       } else {
         setError("Authentication failed");
-        console.log("Authentication failed");
+        console.log(name, password);
       }
     } catch (error) {
       setError("An error occurred during authentication");
     }
   };
+
   return (
     <form onSubmit={handleSubmit} className="login-form">
       <div className="heading-container">
