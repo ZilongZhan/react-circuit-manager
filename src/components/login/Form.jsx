@@ -9,18 +9,20 @@ export const Form = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-  const isAuthenticated = await authenticateUser(name, password);
+      const isAuthenticated = await authenticateUser(name, password);
 
       if (isAuthenticated) {
-        // Continuar con la lógica después de la autenticación exitosa
+        console.log("Authentication successful");
+        console.log(name, password);
+        //afegir logica per quan la autenticació sigui exitosa
       } else {
         setError("Authentication failed");
+        console.log("Authentication failed");
       }
     } catch (error) {
       setError("An error occurred during authentication");
     }
   };
-
   return (
     <form onSubmit={handleSubmit} className="login-form">
       <div className="heading-container">
