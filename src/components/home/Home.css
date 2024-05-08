@@ -17,18 +17,15 @@
   width: calc(100vw - 17px);
 }
 
-.issue-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.table-header {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 1rem;
 }
 
-.table-header__container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+table {
+  border: none;
+  border-collapse: collapse;
   width: 70vw;
-  align-items: center;
-  margin: 1rem 0rem;
+  margin-bottom: 10rem;
 }

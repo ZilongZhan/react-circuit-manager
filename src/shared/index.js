@@ -1,2 +1,2 @@
 export { Footer } from "./Footer";
-export { BlackButton, RedButton } from "./Buttons";
+export { Button } from "./Buttons";
