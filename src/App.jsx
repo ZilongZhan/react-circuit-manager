@@ -8,7 +8,7 @@ import "./sanitize.css";
 function App() {
   return (
     <>
-      <Login />
+     <Login/>
     </>
   );
 }
