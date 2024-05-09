@@ -1,0 +1,43 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2vw;
+}
+.title h1:first-child {
+  color: black;
+}
+
+.title h1:nth-child(2) {
+  color: gray;
+}
+
+p {
+  font-size: x-large;
+  border: 1px solid black;
+  width: 50%;
+  padding: 0.5%;
+  margin: 1%;
+}
+
+.priorityButton {
+  display: flex;
+  flex-direction: column;
+}
+
+div .col-5 {
+  display: flex;
+  flex-direction: column;
+}
