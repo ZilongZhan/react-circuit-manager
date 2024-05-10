@@ -33,11 +33,51 @@ p {
 }
 
 .priorityButton {
+  display: flex; 
+  background-color: rgb(189, 189, 189);
+  border-radius: 40px;
+  padding: 5px;
+}
+
+.priorityButton button {
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    margin: 2px;
+    transition: box-shadow 0.3s ease;
+}
+
+.priorityButton button:hover {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.priorityButton button:nth-child(1) {
+  background-color: rgb(83, 212, 83);
+}
+
+.priorityButton button:nth-child(2) {
+  background-color: rgb(255, 255, 136);
+}
+
+.priorityButton button:nth-child(3) {
+  background-color: rgb(228, 92, 92);
+}
+
+.priorityButton button.selected {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  border: solid 1px gray;
+}
+
+div .col-5{
   display: flex;
   flex-direction: column;
 }
 
-div .col-5 {
+div .col-6{
   display: flex;
   flex-direction: column;
+}
+
+textarea{
+  border: solid 1px black;
 }

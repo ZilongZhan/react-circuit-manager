@@ -53,8 +53,8 @@ export const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Aquí puedes agregar la lógica para enviar los datos del formulario
-    console.log("Formulario enviado:", {
+    // LOGICA PER ENVIAR LES DADES DEL FORMULARI
+    console.log("FORMULARI ENVIAT:", {
       selectedDepartment,
       selectedZone,
       selectedPriority,
@@ -100,47 +100,44 @@ export const Form = () => {
           <label>Priority:</label>
           <div className="priorityButton">
             <button
-              style={{
-                backgroundColor: selectedPriority === "1" ? "green" : "",
-              }}
+              className={selectedPriority === "1" ? "selected" : ""}
               onClick={() => handlePriorityChange("1")}
-            >
-              Prioritat1
-            </button>
+            ></button>
             <button
-              style={{
-                backgroundColor: selectedPriority === "2" ? "yellow" : "",
-              }}
+              className={selectedPriority === "2" ? "selected" : ""}
               onClick={() => handlePriorityChange("2")}
-            >
-              Prioritat2
-            </button>
+            ></button>
             <button
-              style={{ backgroundColor: selectedPriority === "3" ? "red" : "" }}
+              className={selectedPriority === "3" ? "selected" : ""}
               onClick={() => handlePriorityChange("3")}
-            >
-              Prioritat3
-            </button>
+            ></button>
           </div>
         </div>
-
-        <label htmlFor="details">Detalls:</label>
-        <textarea id="details" value={details} onChange={handleDetailsChange} />
       </div>
-      <div>
-        <label htmlFor="images">Seleccionar imatges:</label>
-        <input
-          type="file"
-          id="images"
-          multiple
-          onChange={handleImageChange}
-          accept="image/*"
-        />
-        <ul>
-          {selectedImages.map((imageName, index) => (
-            <li key={index}>{imageName}</li>
-          ))}
-        </ul>
+      <div className="row">
+        <div className="col-6 col-md-6">
+          <label htmlFor="details">Detalls:</label>
+          <textarea
+            id="details"
+            value={details}
+            onChange={handleDetailsChange}
+          />
+        </div>
+        <div className="col-6 col-md-6">
+          <label htmlFor="images">Seleccionar imatges:</label>
+          <input
+            type="file"
+            id="images"
+            multiple
+            onChange={handleImageChange}
+            accept="image/*"
+          />
+          <ul>
+            {selectedImages.map((imageName, index) => (
+              <li key={index}>{imageName}</li>
+            ))}
+          </ul>
+        </div>
       </div>
       <div>
         <label htmlFor="periodificar">Periodificar:</label>
