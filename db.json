@@ -1,0 +1,29 @@
+{
+  "issues": [
+    {
+      "id": "1",
+      "title": "Edited issue",
+      "description": "This is the first issue",
+      "status": "open",
+      "priority": "high",
+      "verified": false,
+      "created_at": "201"
+    },
+    {
+      "id": "eb57",
+      "title": "No title",
+      "description": "No description",
+      "status": "open",
+      "priority": "medium",
+      "verified": false,
+      "created_at": "2024-05-17T15:14:13.471Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "JohnDoe@gmail.com"
+    }
+  ]
+}
