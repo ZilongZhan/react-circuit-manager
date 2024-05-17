@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Form.css";
+import { Button } from "../../shared/Buttons/Button";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 export const Form = () => {
   const [selectedDepartment, setSelectedDepartment] = useState("");
@@ -69,10 +71,17 @@ export const Form = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="title">
-        <h1>ISSUE #ID </h1>
+        <button>
+          <img src="../../public/assets/icons/back.png" alt="" />
+        </button>
+
+        <h1>ISSUE </h1>
+        <h1> #ID</h1>
         <h1>| dd-mm-aa</h1>
       </div>
-      <p>titol issue</p>
+      <div className="row">
+        <input className="col-12" type="text" placeholder="titol issue" />
+      </div>
       <div className="row">
         <div className="col-5 col-md-5">
           <label htmlFor="department">Departaments:</label>
@@ -139,7 +148,7 @@ export const Form = () => {
           </ul>
         </div>
       </div>
-      <div>
+      <div col-12>
         <label htmlFor="periodificar">Periodificar:</label>
         <input
           type="checkbox"
