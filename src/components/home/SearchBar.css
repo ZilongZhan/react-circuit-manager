@@ -3,6 +3,8 @@
   justify-content: flex-start;
   width: 70vw;
   gap: 1.5rem;
+  height: fit-content;
+  margin-top: 2rem;
 }
 
 .search-bar {
@@ -10,16 +12,12 @@
   width: 30rem;
   padding: 1rem;
   font-size: 20px;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
 }
 
 .priority-dropdown {
   height: 3rem;
   width: fit-content;
   padding: 0 0.5rem;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
   border: none;
   border-radius: 3px;
   font-size: 16px;

@@ -7,12 +7,6 @@ export const SearchBar = ({ handleNewFilterValue }) => {
 
   return (
     <div className="search-bar__container">
-      <input
-        type="text"
-        className="search-bar"
-        placeholder="Filtrar per:"
-        onInput={handleChangeFilterValue}
-      />
       <select className="priority-dropdown" onChange={handleChangeFilterValue}>
         <option value="">Default</option>
         <option className="priority-none" value="none">
@@ -31,6 +25,12 @@ export const SearchBar = ({ handleNewFilterValue }) => {
           Purple
         </option>
       </select>
+      <input
+        type="text"
+        className="search-bar"
+        placeholder="Filtrar per:"
+        onInput={handleChangeFilterValue}
+      />
     </div>
   );
 };

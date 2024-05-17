@@ -15,7 +15,7 @@
   height: fit-content;
   min-height: 100vh;
   width: calc(100vw - 17px);
-}
+  }
 
 .table-header {
   font-size: 25px;
@@ -27,5 +27,10 @@ table {
   border: none;
   border-collapse: collapse;
   width: 70vw;
-  margin-bottom: 10rem;
+}
+
+.table__container {
+  height: fit-content;
+  min-height: 33rem;
+  margin-top: 2rem;
 }
