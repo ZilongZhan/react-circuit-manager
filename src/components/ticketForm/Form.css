@@ -9,7 +9,9 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 8% 8% 0 15%;
+  margin: 5% 2% 0 2%;
+  border: 1px solid black;
+  padding: 2%;
 }
 .title {
   gap: 2px;
@@ -47,6 +49,7 @@ button img {
   border: 1px solid black;
   font-size: x-large;
   box-sizing: border-box;
+  height: 7vh;
 }
 
 p {
@@ -97,7 +100,7 @@ h1 {
 
 .priorityButton button.selected {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  border: solid 1px gray;
+  border: solid 1px rgb(186, 186, 186);
 }
 
 div .col-5 {
@@ -128,16 +131,24 @@ select option {
   font-size: large;
   border: 1px solid black;
   border-radius: 2%;
+  background-color: white;
 }
 
-#department {
-  background-color: rgb(188, 188, 188);
-  height: 50%;
-  width: fit-content;
-}
-
+#department,
 #zone {
-  background-color: rgb(188, 188, 188);
-  height: 50%;
-  width: fit-content; /* Ajusta la altura del elemento select */
+  background-color: rgb(214, 214, 214);
+  height: 7vh;
+  width: 18vw;
+  border-radius: 10px;
+}
+
+.row:nth-last-child(3) {
+  display: flex;
+  justify-content: space-between;
+}
+
+button[type="submit"] {
+  text-align: right;
+  display: block;
+  width: 100%;
 }

@@ -126,7 +126,7 @@ export const Form = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-6">
+          <div className="col-5">
             <label htmlFor="details">Detalls:</label>
             <textarea
               id="details"
@@ -134,7 +134,7 @@ export const Form = () => {
               onChange={handleDetailsChange}
             />
           </div>
-          <div className="col-6 ">
+          <div className="col-5 ">
             <label htmlFor="images">Seleccionar imatges:</label>
             <input
               type="file"
