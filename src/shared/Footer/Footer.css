@@ -1,24 +1,29 @@
-footer{
-    background-color: #333;
-    color: white;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    height: 60px;
-    width: 100%;
-    z-index: 100;
-    display: flex;
+footer {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  height: 60px;
+  width: 70vw;
+  z-index: 100;
+  display: flex;
 }
 
-.footer-content{
-    display: flex;
-    padding: 12.5px;
-    gap: 15px;
+.footer-content {
+  display: flex;
+  padding: 12.5px;
+  gap: 15px;
 }
 
 .red-footer {
-    width: 30%;
-    height: 100%;
-    background-color: red;
-    justify-content: flex-end;
+  width: 30%;
+  height: 100%;
+  background-color: red;
+  justify-content: flex-end;
+}
+
+.aside-content {
+  display: flex;
+  flex-direction: column;
 }

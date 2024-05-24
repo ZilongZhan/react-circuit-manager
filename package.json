@@ -12,6 +12,7 @@
     "server": "json-server --watch db.json --port 5000"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "axios": "^1.6.8",
     "json-server": "^1.0.0-alpha.23",
     "react": "^18.2.0",

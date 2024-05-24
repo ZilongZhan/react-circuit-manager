@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Delete, Get, Post, Update } from "./services";
+import { STATUS } from "./data";
+import { TicketForm } from "./components";
 
 import "./App.css";
 import "./sanitize.css";
 
 function App() {
-  const STATUS = {
-    open: "open",
-    closed: "closed",
-    deleted: "deleted",
-  };
-
   // Hooks
-
   const [issues, setIssues] = useState([]);
   const [users, setUsers] = useState([]);
   const [newIssue, setNewIssue] = useState({
@@ -88,30 +83,14 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const issueWithTimestamp = {
-      ...newIssue,
-      created_at: new Date().toISOString(),
-    };
-    setNewIssue(issueWithTimestamp);
-    Post("issues", issueWithTimestamp);
+    Post("issues", newIssue);
   };
 
   // Edit issue
 
-  const handleEditIssue = async (id) => {
-    const issue = await Get("issues", id);
-    console.log(issue);
-    const editedIssue = {
-      ...issue["0"],
-      title: "Edited issue",
-    };
-    console.log(editedIssue);
-    await Update("issues", id, editedIssue);
-  };
-
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      {/* <form onSubmit={handleSubmit}>
         <label>
           Title:
           <input type="text" name="title" onChange={handleChange} />
@@ -133,7 +112,8 @@ function App() {
           </select>
         </label>
         <button type="submit">Submit</button>
-      </form>
+      </form> */}
+      <TicketForm />
     </>
   );
 }
