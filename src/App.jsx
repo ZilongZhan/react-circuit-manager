@@ -5,6 +5,12 @@ import "./App.css";
 import "./sanitize.css";
 
 function App() {
+  const STATUS = {
+    open: "open",
+    closed: "closed",
+    deleted: "deleted",
+  };
+
   // Hooks
 
   const [issues, setIssues] = useState([]);
@@ -12,7 +18,7 @@ function App() {
   const [newIssue, setNewIssue] = useState({
     title: "No title",
     description: "No description",
-    status: "open",
+    status: STATUS.open,
     priority: "medium",
     verified: false,
   });
