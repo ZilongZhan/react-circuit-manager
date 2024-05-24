@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Lexend";
+  src: url("/fonts/Lexend-VariableFont_wght.ttf");
+}
+
+* {
+  font-family: "Lexend";
+}
+
+.main-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: fit-content;
+  min-height: 100vh;
+  width: calc(100vw - 17px);
+  }
+
+.table-header {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+table {
+  border: none;
+  border-collapse: collapse;
+  width: 70vw;
+}
+
+.table__container {
+  height: fit-content;
+  min-height: 33rem;
+  margin-top: 2rem;
+}
