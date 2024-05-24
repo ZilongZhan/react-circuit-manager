@@ -9,7 +9,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5% 2% 0 2%;
+  margin: 5% 4% 0 10%;
   border: 1px solid black;
   padding: 2%;
 }
@@ -147,8 +147,7 @@ select option {
   justify-content: space-between;
 }
 
-button[type="submit"] {
-  text-align: right;
-  display: block;
-  width: 100%;
+.submit-button {
+  display: flex;
+  justify-content: flex-end;
 }

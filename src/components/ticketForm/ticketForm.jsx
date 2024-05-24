@@ -1,14 +1,13 @@
-import {Form} from "./Form";
-import {BurguerMenu} from "../../shared/BurguerMenu/BurgerMenu.jsx";
-
+import { Form } from "./Form";
+import { BurgerMenu } from "../../shared/BurguerMenu/BurgerMenu";
+import { Footer } from "../../shared/Footer/Footer";
 
 export const TicketForm = () => {
-
-return(
+  return (
     <>
-    <BurguerMenu />
-    <Form />
+      <BurgerMenu />
+      <Form />
+      <Footer />
     </>
-);
-
+  );
 };

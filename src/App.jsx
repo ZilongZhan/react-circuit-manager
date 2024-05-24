@@ -1,6 +1,8 @@
 import "./App.css";
 import "./sanitize.css";
-
-function App() {}
+import { TicketForm } from "./components/ticketForm/ticketForm";
+function App() {
+  return <TicketForm />;
+}
 
 export default App;
