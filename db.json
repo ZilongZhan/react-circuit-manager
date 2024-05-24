@@ -1,0 +1,20 @@
+{
+  "issues": [
+    {
+      "id": "1",
+      "title": "Edited issue",
+      "description": "This is the first issue",
+      "status": "open",
+      "priority": "high",
+      "verified": false,
+      "created_at": "201"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "JohnDoe@gmail.com"
+    }
+  ]
+}
