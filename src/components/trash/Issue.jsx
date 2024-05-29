@@ -1,10 +1,15 @@
-import { Button } from "../../shared";
-
 import "./Issue.css";
 
 export const Issue = ({ issue, handleSetIssues }) => {
-  const handleDeleteNote = (issueID) => {
-    console.log(issueID);
+  const handleRestoreIssue = (issue) => {
+    const restoredIssue = {
+      ...issue,
+      STATUS: open,
+    };
+
+    Update(restoredIssue)
+      .then(() => Get())
+      .then((issues) => handleSetIssues(issues));
   };
 
   return (
@@ -13,13 +18,13 @@ export const Issue = ({ issue, handleSetIssues }) => {
         {issue.sender}
       </td>
       <td className="issue-info">{issue.description}</td>
-      <td className="issue-info time">{issue.created_at}</td>
+      <td className="issue-info time">{issue.createdAt}</td>
       <td>
         <button
           className="delete-button"
-          onClick={() => handleDeleteNote(issue.id)}
+          onClick={() => handleRestoreIssue(issue)}
         >
-          <img src="/icons/trashcan.png" alt="trash" />
+          <img src="/assets/icons/restore.png" alt="restore" />
         </button>
       </td>
     </tr>

@@ -4,7 +4,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import "./sanitize.css";
 
-import { Home, Login } from "./components";
+import { Home, Login, Trash } from "./components";
 
 const router = createBrowserRouter([
   {
@@ -16,8 +16,8 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/contact",
-    element: <App />,
+    path: "/trash",
+    element: <Trash />,
   },
 ]);
 

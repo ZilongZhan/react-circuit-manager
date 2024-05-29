@@ -1,4 +1,4 @@
-export const BASE_URL = "http://localhost:5000";
+export const BASE_URL = "https://json-server-deploy-j9se.onrender.com";
 
 export { Delete } from "./delete";
 export { Get } from "./get";

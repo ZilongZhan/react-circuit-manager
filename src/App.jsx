@@ -4,7 +4,6 @@ import { Footer, BurgerMenu } from "./shared";
 import { Home } from "./components";
 import { useIssues } from "./hooks";
 
-import "./App.css";
 import "./sanitize.css";
 
 function App() {

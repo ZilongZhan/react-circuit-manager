@@ -4,11 +4,11 @@ export const usePage = () => {
   const [page, setPage] = useState(1);
 
   const handleSetPage = (newPage) => {
-    setPage(newPage)
+    setPage(newPage);
   };
 
   return {
     page,
-    handleSetPage
-  }
+    handleSetPage,
+  };
 };

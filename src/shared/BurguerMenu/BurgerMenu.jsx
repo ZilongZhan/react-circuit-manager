@@ -23,9 +23,9 @@ export const BurgerMenu = () => {
         <div className="burger-menu__content">
           <h1 className="burger-menu__tittle">CircuitSync</h1>
           <nav className="burger-menu__nav">
-            <Button src={"/"} label={"1 boton"} color={"black-button"} />
-            <Button src={"/"} label={"2 boton"} color={"black-button"} />
-            <Button src={"/"} label={"3 boton"} color={"black-button"} />
+            <Button src={"/home"} label={"home"} color={"black-button"} />
+            <Button src={"/"} label={"data-DISABLED"} color={"black-button"} />
+            <Button src={"/trash"} label={"trash"} color={"black-button"} />
           </nav>
         </div>
       )}

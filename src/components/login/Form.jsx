@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getUsers } from "../../services/userServices";
+import { useUsers } from "../../hooks";
 
 export const Form = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const { users, handleSetUsers } = useUsers();
+
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     try {
-      const users = await getUsers();
       const authenticatedUser = users.find(
         (user) => user.name === name && user.password === password
       );
