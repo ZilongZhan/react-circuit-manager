@@ -185,7 +185,9 @@ export const Form = () => {
             )}
           </div>
         </div>
-        <button type="submit">Submit</button>
+        <div className="submit-button">
+          <Button type="submit" label={"Enviar"} color={"black-button"} />
+        </div>
       </div>
     </form>
   );

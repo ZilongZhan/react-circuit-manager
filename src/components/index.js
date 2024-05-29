@@ -1,3 +1,3 @@
 export { Home } from "./home";
 export { Login } from "./login";
-export { TicketForm } from "./ticketForm";
+export { Form } from "./ticketForm";

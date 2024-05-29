@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Delete, Get, Post, Update } from "./services";
-import { STATUS } from "./data";
-import { TicketForm } from "./components";
+import { Footer, BurgerMenu } from "./shared";
+import { Home } from "./components";
+import { useIssues } from "./hooks";
 
 import "./App.css";
 import "./sanitize.css";
 
 function App() {
   // Hooks
-  const [issues, setIssues] = useState([]);
+  // const [issues, setIssues] = useState([]);
+  const { issues, handleSetIssues } = useIssues();
   const [users, setUsers] = useState([]);
-  
 
   // Issues
 
@@ -45,8 +46,6 @@ function App() {
 
   // Form issue
 
-  
-
   const handleSubmit = (e) => {
     e.preventDefault();
     Post("issues", newIssue);
@@ -79,7 +78,10 @@ function App() {
         </label>
         <button type="submit">Submit</button>
       </form> */}
-      <TicketForm />
+      <Outlet />
+      <Home />
+      <Footer />
+      <BurgerMenu />
     </>
   );
 }

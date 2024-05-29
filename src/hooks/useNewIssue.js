@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { STATUS } from "../data";
 
 export const useNewIssue = () => {
   const [newIssue, setNewIssue] = useState({
@@ -19,5 +20,5 @@ export const useNewIssue = () => {
   return {
     newIssue,
     handleChange,
-  }; 
+  };
 };

@@ -23,7 +23,7 @@ export const Home = () => {
   const startIndex = (page - 1) * issuesPerPage;
   const endIndex = startIndex + issuesPerPage;
   const filteredIssues = issues.filter(filterIssues);
-  const currentIssues = filteredIssues.slice(startIndex, endIndex);
+  const issuesToDisplay = filteredIssues.slice(startIndex, endIndex);
 
   const handlePageChange = (pageNumber) => {
     handleSetPage(pageNumber);
@@ -34,7 +34,7 @@ export const Home = () => {
       <SearchBar handleNewFilterValue={handleNewFilterValue} />
       <IssuesTable
         newFilter={newFilter}
-        currentIssues={currentIssues}
+        issuesToDisplay={issuesToDisplay}
         handleSetIssues={handleSetIssues}
       />
       <Pagination

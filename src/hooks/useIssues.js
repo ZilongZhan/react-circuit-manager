@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Get } from "../services";
 
 export const useIssues = () => {
   const [issues, setIssues] = useState([]);
@@ -10,7 +11,7 @@ export const useIssues = () => {
 
   useEffect(() => {
     fetchIssues();
-  }, [issues]);
+  }, []);
 
   const handleSetIssues = (newIssues) => {
     setIssues(newIssues);
