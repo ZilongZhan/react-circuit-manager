@@ -4,13 +4,15 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import "./sanitize.css";
 
+import { Home, Login } from "./components";
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Login />,
   },
   {
-    path: "/about",
+    path: "/home",
     element: <App />,
   },
   {

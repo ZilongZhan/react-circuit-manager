@@ -78,7 +78,6 @@ function App() {
         </label>
         <button type="submit">Submit</button>
       </form> */}
-      <Outlet />
       <Home />
       <Footer />
       <BurgerMenu />

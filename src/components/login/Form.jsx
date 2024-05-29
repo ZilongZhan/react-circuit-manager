@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { getUsers } from "../../services/userServices";
 
 export const Form = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -15,11 +17,9 @@ export const Form = () => {
       );
 
       if (authenticatedUser) {
-        console.log(name, password);
-        // CONTINURAR QUAN LA AUTENTIFICACIO ES EXITOSA
+        navigate("/home");
       } else {
         setError("Authentication failed");
-        console.log(name, password);
       }
     } catch (error) {
       setError("An error occurred during authentication");
