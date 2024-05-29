@@ -1,3 +1,5 @@
+import { Button } from "../../shared";
+
 import "./SearchBar.css";
 
 export const SearchBar = ({ handleNewFilterValue }) => {
@@ -31,6 +33,9 @@ export const SearchBar = ({ handleNewFilterValue }) => {
         placeholder="Filtrar per:"
         onInput={handleChangeFilterValue}
       />
+      <div className="button-container">
+        <Button src={null} label="Create Issue ➕" color="red-button" />
+      </div>
     </div>
   );
 };
