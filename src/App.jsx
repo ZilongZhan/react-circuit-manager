@@ -1,10 +1,7 @@
 import "./sanitize.css";
 
 function App() {
-  return (
-    <>
-    </>
-  );
+  return <></>;
 }
 
 export default App;

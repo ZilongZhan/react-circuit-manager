@@ -13,11 +13,13 @@
 }
 
 .burger-menu {
-  width: 7%;
+  width: fit-content;
+  padding: 1rem;
 }
 
 .burger-menu__open {
-  width: 20%;
+  width: fit-content;
+  padding: 1rem;
 }
 
 .burger-menu__button {
@@ -54,6 +56,6 @@
 }
 
 .burger-menu__tittle {
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: Impact, Jockey One, sans-serif;
 }
