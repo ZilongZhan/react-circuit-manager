@@ -2,7 +2,7 @@ import "./Footer.css";
 
 export const Footer = () => {
   return (
-    <footer>
+    <footer className="main-footer">
       <div className="red-footer footer-content">
         <img src="assets/logos/logo5.svg" alt="logo5" />
       </div>

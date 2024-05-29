@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Button, Footer, BurgerMenu } from "../../shared";
 
-import "./Form.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./IssueForm.css";
 
-export const Form = () => {
+export const IssueForm = () => {
   const [selectedDepartment, setSelectedDepartment] = useState("");
   const [selectedZone, setSelectedZone] = useState("");
   const [selectedPriority, setSelectedPriority] = useState("");
@@ -71,12 +70,12 @@ export const Form = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className="issue-form" onSubmit={handleSubmit}>
         <div className="container">
           <div className="title row">
             <div className="col-12">
-              <button>
-                <img src="../../public/assets/icons/back.png" alt="" />
+              <button className="form-issue__button">
+                <img src="/assets/icons/back.png" alt="" />
               </button>
               <h1>ISSUE </h1>
               <h1> #ID</h1>
@@ -88,7 +87,9 @@ export const Form = () => {
           </div>
           <div className="row">
             <div className="col-5">
-              <label htmlFor="department">Departaments:</label>
+              <label className="issue-label" htmlFor="department">
+                Departaments:
+              </label>
               <select
                 id="department"
                 value={selectedDepartment}
@@ -103,6 +104,7 @@ export const Form = () => {
             <div className="col-5 ">
               <label htmlFor="zone">Zones:</label>
               <select
+                className="issue-form__select"
                 id="zone"
                 value={selectedZone}
                 onChange={handleZoneChange}
@@ -135,6 +137,7 @@ export const Form = () => {
             <div className="col-5">
               <label htmlFor="details">Detalls:</label>
               <textarea
+                className="issue-form__textarea"
                 id="details"
                 value={details}
                 onChange={handleDetailsChange}
@@ -178,11 +181,17 @@ export const Form = () => {
                     <option value="años">Anys</option>
                   </select>
                   <span>
-                    <button onClick={() => handleCantidadChange("decrease")}>
+                    <button
+                      className="form-issue__button"
+                      onClick={() => handleCantidadChange("decrease")}
+                    >
                       -
                     </button>
                     {cantidad}
-                    <button onClick={() => handleCantidadChange("increase")}>
+                    <button
+                      className="form-issue__button"
+                      onClick={() => handleCantidadChange("increase")}
+                    >
                       +
                     </button>
                   </span>

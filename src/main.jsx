@@ -4,7 +4,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import "./sanitize.css";
 
-import { Home, Login, Trash, Form } from "./components";
+import { Home, Login, Trash, IssueForm } from "./components";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/form",
-    element: <Form />,
+    element: <IssueForm />,
   },
 ]);
 

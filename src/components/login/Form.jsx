@@ -31,7 +31,7 @@ export const Form = () => {
   return (
     <form onSubmit={handleSubmit} className="login-form">
       <div className="heading-container">
-        <h1>Inicia sessió</h1>
+        <h1 className="login-heading">Inicia sessió</h1>
       </div>
       <div className="input-container">
         <label htmlFor="login-name">Nom d'usuari:</label>

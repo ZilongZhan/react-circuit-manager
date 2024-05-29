@@ -1,11 +1,4 @@
-* {
-  border: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Lexend", sans-serif;
-}
-
-.bodyContent{
+.bodyContent {
   display: flex;
   background-image: url("/assets/backgrounds/background-image.jpg");
   background-repeat: no-repeat;
@@ -13,7 +6,7 @@
 }
 
 .aside-content {
-  width: 30vw;
+  width: fit-content;
   height: 100vh;
   display: flex;
   justify-content: space-around;
@@ -32,14 +25,15 @@
   background: rgb(255, 45, 45);
   display: flex;
   flex-direction: column;
-  width: 30vw;
   color: white;
   justify-content: center;
   align-items: center;
+  width: 30vw;
+  min-width: fit-content;
 }
 
 .login-form {
-  width: 22vw;
+  width: fit-content;
   padding: 4vh;
   background: transparent;
   font-size: 20px;
@@ -49,13 +43,14 @@
   margin: 3vh 0;
   display: flex;
   flex-direction: column;
+  width: fit-content;
 }
 
 .input-container input {
   font-size: 20px;
-  margin: 1vh 0;
-  border-radius: 5px;
-  padding: 5px;
+  padding: 0 0.5rem;
+  background: white;
+  border: none;
 }
 
 .button-container {
@@ -71,6 +66,7 @@
   transition: 0.25s;
   transform: skew(-20deg);
   margin-right: 0.5vw;
+  border: none;
 }
 
 .login-button:hover {
@@ -83,14 +79,14 @@
   transform: skew(20deg);
 }
 
-.footer {
+.login-footer {
   height: 5rem;
   background: black;
   align-items: center;
   display: flex;
 }
 
-.footer img {
+.login-footer img {
   padding-right: 3vw;
 }
 
@@ -98,6 +94,8 @@
   border-left: 5px solid white;
 }
 
-.heading-container h1 {
+.login-heading {
   margin-left: 1vw;
+  font-size: 30px;
+  font-weight: bold;
 }

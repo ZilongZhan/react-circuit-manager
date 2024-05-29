@@ -1,11 +1,6 @@
-* {
-  border: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Lexend", sans-serif;
-}
+@import "bootstrap/dist/css/bootstrap.min.css";
 
-form {
+.issue-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,6 +8,7 @@ form {
   border: 1px solid black;
   padding: 2%;
 }
+
 .title {
   gap: 2px;
   margin-bottom: 2%;
@@ -30,16 +26,16 @@ form {
   color: gray;
 }
 
-label {
+.issue-label {
   font-size: x-large;
   font-weight: bold;
 }
 
-button {
+.form-issue__button {
   background-color: white;
 }
 
-button img {
+.form-issue__button img {
   background-color: white;
   width: 40px;
   height: 40px;
@@ -52,14 +48,7 @@ button img {
   height: 7vh;
 }
 
-p {
-  font-size: x-large;
-  border: 1px solid black;
-  width: 50%;
-  margin: 1%;
-}
-
-h1 {
+.col-12 h1 {
   margin-left: 3%;
 }
 
@@ -122,11 +111,11 @@ div .col-12 {
   padding: 0 !important;
 }
 
-textarea {
+.issue-form__textarea {
   border: solid 1px black;
 }
 
-select option {
+.issue-form__select option {
   margin: 2%;
   font-size: large;
   border: 1px solid black;
