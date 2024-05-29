@@ -25,3 +25,9 @@
   font-size: 16px;
   border-right: 0.5rem solid transparent;
 }
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
