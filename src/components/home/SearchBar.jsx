@@ -34,7 +34,7 @@ export const SearchBar = ({ handleNewFilterValue }) => {
         onInput={handleChangeFilterValue}
       />
       <div className="button-container">
-        <Button src={null} label="Create Issue ➕" color="red-button" />
+        <Button src={"/form"} label="Create Issue ➕" color="red-button" />
       </div>
     </div>
   );

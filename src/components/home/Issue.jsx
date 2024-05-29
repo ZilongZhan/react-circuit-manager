@@ -1,17 +1,23 @@
-import { Button } from "../../shared";
+import { Get, Update } from "../../services";
 
 import "./Issue.css";
 
 export const Issue = ({ issue, handleSetIssues }) => {
   const handleDeleteNote = (issueID) => {
-    console.log(issueID);
+    const deletedIssue = {
+      ...issue,
+      status: "deleted",
+    };
+    const src = "issues";
+
+    Update(src, issueID, deletedIssue)
+      .then(() => Get("issues"))
+      .then((issues) => handleSetIssues(issues));
   };
 
   return (
     <tr className="issue">
-      <td className={`issue-info priority-${issue.priority}`}>
-        {issue.sender}
-      </td>
+      <td className={`issue-info priority-${issue.sender}`}>{issue.sender}</td>
       <td className="issue-info">{issue.description}</td>
       <td className="issue-info time">{issue.created_at}</td>
       <td>

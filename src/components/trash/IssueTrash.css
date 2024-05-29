@@ -1,16 +1,16 @@
-.issue {
+.issueTrash {
   background: rgb(237, 237, 237, 0.4);
   border: 0.5px solid rgb(182, 182, 182);
   transition: 0.3s;
 }
 
-.issue:hover {
+.issueTrash:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.5);
   transition: 0.3s;
 }
 
-.issue .issue-info {
+.issueTrash .issue-info {
   padding: 1rem;
   font-weight: bold;
   width: fit-content;
@@ -23,23 +23,23 @@
   font-weight: 300 !important;
 }
 
-.priority-red {
+.issueTrash .priority-red {
   color: #ffacac !important;
 }
 
-.priority-green {
+.issueTrash .priority-green {
   color: #8fcfb4 !important;
 }
 
-.priority-yellow {
+.issueTrash .priority-yellow {
   color: #ead99d !important;
 }
 
-.priority-purple {
+.issueTrash .priority-purple {
   color: #ac8ec3 !important;
 }
 
-.priority-none {
+.issueTrash .priority-none {
   color: #b4b4b4 !important;
 }
 

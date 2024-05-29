@@ -9,11 +9,27 @@ export const TableBody = ({ issues, newFilter, handleSetIssues }) => {
     );
   };
 
+  const issuesToDisplay = issues
+    .filter((issue) => issue.status === "open")
+    .filter(filterIssues);
+
+  const isEmptyIssues = issuesToDisplay.length === 0;
+
   return (
     <tbody className="issues-list">
-      {issues.filter(filterIssues).map((issue) => (
-        <Issue key={issue.id} issue={issue} handleSetIssues={handleSetIssues} />
-      ))}
+      {isEmptyIssues ? (
+        <tr>
+          <td>No issues to display</td>
+        </tr>
+      ) : (
+        issuesToDisplay.map((issue) => (
+          <Issue
+            key={issue.id}
+            issue={issue}
+            handleSetIssues={handleSetIssues}
+          />
+        ))
+      )}
     </tbody>
   );
 };
