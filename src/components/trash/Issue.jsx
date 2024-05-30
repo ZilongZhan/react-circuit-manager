@@ -17,7 +17,7 @@ export const Issue = ({ issue, handleSetIssues }) => {
 
   return (
     <tr className="issueTrash">
-      <td className={`issue-info priority-${issue.sender}`}>{issue.sender}</td>
+      <td className={`issue-info priority-${issue.sender}`}>{issue.title}</td>
       <td className="issue-info">{issue.description}</td>
       <td className="issue-info time">{issue.created_at}</td>
       <td>

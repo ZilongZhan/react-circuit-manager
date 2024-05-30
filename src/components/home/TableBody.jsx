@@ -18,7 +18,7 @@ export const TableBody = ({ issues, newFilter, handleSetIssues }) => {
   return (
     <tbody className="issues-list">
       {isEmptyIssues ? (
-        <tr>
+        <tr className="no-issues">
           <td>No issues to display</td>
         </tr>
       ) : (

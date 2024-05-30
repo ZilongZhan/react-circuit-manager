@@ -15,8 +15,7 @@
   height: fit-content;
   min-height: 100vh;
   width: calc(100vw - 17px);
-  margin-left: 7%;
-  width: 93%;
+  margin-left: 3%;
 }
 
 .table-header {
