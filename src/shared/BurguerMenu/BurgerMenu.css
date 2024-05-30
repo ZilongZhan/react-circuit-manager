@@ -6,7 +6,7 @@
   height: 100%;
   background-color: #cfcfcf;
   border-right: 5px solid #000000;
-  transition: width 0.3s ease;
+  transition: width 0.5s ease;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from "react";
+import { useActiveUser } from "../../hooks";
 import { Button } from "../Buttons";
 
 import "./BurgerMenu.css";
 
 export const BurgerMenu = () => {
   const [open, setOpen] = useState(false);
+  const { activeUser } = useActiveUser();
   const menuRef = useRef();
 
   const handleClick = () => {
@@ -37,6 +39,7 @@ export const BurgerMenu = () => {
       {open && (
         <div className="burger-menu__content">
           <h1 className="burger-menu__tittle">CircuitSync</h1>
+          {activeUser && <p className="burger-menu__user">{activeUser}</p>}
           <nav className="burger-menu__nav">
             <Button src={"/home"} label={"home"} color={"black-button"} />
             <Button src={"/trash"} label={"trash"} color={"black-button"} />

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useUsers } from "../../hooks";
+import { useUsers, useActiveUser } from "../../hooks";
 
 export const Form = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const { users, handleSetUsers } = useUsers();
+  const { handleActiveUser } = useActiveUser();
 
   const navigate = useNavigate();
 
@@ -19,6 +20,7 @@ export const Form = () => {
       );
 
       if (authenticatedUser) {
+        handleActiveUser(authenticatedUser.name);
         navigate("/home");
       } else {
         setError("Authentication failed");

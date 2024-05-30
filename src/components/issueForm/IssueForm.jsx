@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button, Footer, BurgerMenu } from "../../shared";
+import { Post } from "../../services";
 
 import "./IssueForm.css";
 
 export const IssueForm = () => {
+  const [title, setTitle] = useState("");
   const [selectedDepartment, setSelectedDepartment] = useState("");
   const [selectedZone, setSelectedZone] = useState("");
   const [selectedPriority, setSelectedPriority] = useState("");
@@ -12,6 +15,12 @@ export const IssueForm = () => {
   const [periodo, setPeriodo] = useState("días");
   const [cantidad, setCantidad] = useState(1);
   const [selectedImages, setSelectedImages] = useState([]);
+
+  const navigate = useNavigate();
+
+  const handleTitleChange = (event) => {
+    setTitle(event.target.value);
+  };
 
   const handlePriorityChange = (priority) => {
     setSelectedPriority(priority);
@@ -55,17 +64,24 @@ export const IssueForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // LOGICA PER ENVIAR LES DADES DEL FORMULARI
-    console.log("FORMULARI ENVIAT:", {
-      selectedDepartment,
-      selectedZone,
-      selectedPriority,
-      details,
-      periodificar,
-      periodo,
-      cantidad,
-      selectedImages,
-    });
+
+    const issueToSubmit = {
+      sender: "red",
+      title: title,
+      description: details,
+      status: "open",
+      verified: false,
+      created_at: new Date().toLocaleDateString(),
+    };
+
+    console.log(issueToSubmit);
+
+    Post("issues", issueToSubmit);
+
+    setTitle("");
+    setDetails("");
+
+    navigate("/home");
   };
 
   return (
@@ -83,7 +99,13 @@ export const IssueForm = () => {
             </div>
           </div>
           <div className="row">
-            <input className="col-12 " type="text" placeholder="titol issue" />
+            <input
+              className="col-12 "
+              type="text"
+              placeholder="titol issue"
+              name="title"
+              onChange={handleTitleChange}
+            />
           </div>
           <div className="row">
             <div className="col-5">
@@ -119,14 +141,17 @@ export const IssueForm = () => {
               <label>Priority:</label>
               <div className="priorityButton">
                 <button
+                  type="button"
                   className={selectedPriority === "1" ? "selected" : ""}
                   onClick={() => handlePriorityChange("1")}
                 ></button>
                 <button
+                  type="button"
                   className={selectedPriority === "2" ? "selected" : ""}
                   onClick={() => handlePriorityChange("2")}
                 ></button>
                 <button
+                  type="button"
                   className={selectedPriority === "3" ? "selected" : ""}
                   onClick={() => handlePriorityChange("3")}
                 ></button>
@@ -200,12 +225,7 @@ export const IssueForm = () => {
             </div>
           </div>
           <div className="submit-button">
-            <Button
-              type="submit"
-              src={"/home"}
-              label={"Enviar"}
-              color={"black-button"}
-            />
+            <Button type="submit" label={"Enviar"} color={"black-button"} />
           </div>
         </div>
       </form>
