@@ -71,7 +71,10 @@ export const IssueForm = () => {
       description: details,
       status: "open",
       verified: false,
-      created_at: new Date().toLocaleDateString(),
+      created_at: new Date().toLocaleTimeString("es-ES", {
+        hour: "2-digit",
+        minute: "2-digit",
+      }),
     };
 
     console.log(issueToSubmit);
